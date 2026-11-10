@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Anfrage – Schwarzwaldautomaten</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<p class="brand">Schwarzwaldautomaten</p>
+			<nav class="main-nav" aria-label="Hauptnavigation">
+				<a href="index.html">Start</a>
+				<a href="informationen.html">Informationen</a>
+				<a href="preisliste.html">Preisliste</a>
+				<a href="unternehmen.html">Unternehmen</a>
+				<a href="anfrage.html">Anfrage</a>
+				<a href="kontakt.html">Kontakt</a>
+			</nav>
+		</header>
+
+		<main>
+			<h1>Anfrage für einen Warenautomaten</h1>
+			<p class="lead">
+				Unverbindliche Anfrage. Pflichtfelder sind gekennzeichnet.
+			</p>
+
+			<form id="demo-form" aria-label="Anfrageformular">
+				<div class="form-row">
+					<label for="kundennummer">
+						Kundennummer:
+						<input type="text" id="kundennummer" name="kundennummer" />
+					</label>
+				</div>
+
+				<fieldset>
+					<legend>Automatenart <span class="required">*</span></legend>
+					<label>
+						<input
+							type="radio"
+							name="automatenart"
+							value="Snackautomat"
+							required
+						/>
+						Snackautomat
+					</label>
+					<label>
+						<input
+							type="radio"
+							name="automatenart"
+							value="Getränkeautomat"
+							required
+						/>
+						Getränkeautomat
+					</label>
+				</fieldset>
+
+				<div class="form-group">
+					<label for="anzahl">Anzahl:</label>
+					<!-- pattern gelöscht, stattdessen min und step für saubere Zahlenvalidierung -->
+					<input type="number" id="anzahl" min="1" step="1" required />
+					<span id="error-message" class="error-hidden">Ungültige Eingabe! Bitte eine ganze Zahl ab 1 eingeben.</span>
+				</div>
+
+				<fieldset>
+					<legend>Extras</legend>
+					<label>
+						<input
+							type="checkbox"
+							id="extra_karte"
+							name="extra_karte"
+							value="Kartenzahlung"
+						/>
+						Kartenzahlung
+					</label>
+					<label>
+						<input
+							type="checkbox"
+							id="extra_kuehlung"
+							name="extra_kuehlung"
+							value="Kühlung"
+						/>
+						Kühlung
+					</label>
+				</fieldset>
+
+				<div class="form-row">
+					<label for="wunschtermin">
+						Wunschtermin:
+						<input type="date" id="wunschtermin" name="wunschtermin" />
+					</label>
+				</div>
+
+				<div class="form-row">
+					<label for="nachricht">
+						Nachricht:
+						<textarea
+							id="nachricht"
+							name="nachricht"
+							rows="5"
+							aria-label="Nachricht"
+						></textarea>
+					</label>
+				</div>
+
+				<div class="form-row">
+					<button type="submit">Eingaben prüfen</button>
+				</div>
+			</form>
+
+			<pre id="testausgabe" class="output" aria-live="polite" hidden></pre>
+		</main>
+
+		<script src="demo.js" defer></script>
+
+		<!-- Script für die Live-Validierung der Anzahl -->
+	</body>
+</html>

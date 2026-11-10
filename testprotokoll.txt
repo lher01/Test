@@ -1,0 +1,8 @@
+Testprotokoll – Schwarzwaldautomaten Projekt
+
+- Prüffälle: Startseite, Informationen, Preisliste, Unternehmen, Anfrage, Kontakt
+- Geprüft: HTML-Validierung der Titel, Meta-Attribute, Lang-Attribut und Navigationslinks
+- Geprüft: gemeinsame CSS-Datei und relative Dateipfade
+- Geprüft: schmale Ansicht im Browser, Tastaturzugang mit Fokus auf Links und Formularfelder
+- Ergebnis: Alle Seiten sind erreichbar, Navigation funktioniert und es gibt keine leeren Links.
+- Hinweis: Die Preise und Unternehmensdaten sind bewusst als Übungsdaten gekennzeichnet.

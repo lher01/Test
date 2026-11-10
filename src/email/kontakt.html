@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt – Schwarzwaldautomaten</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="brand">Schwarzwaldautomaten</p>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="informationen.html">Informationen</a>
+        <a href="preisliste.html">Preisliste</a>
+        <a href="unternehmen.html">Unternehmen</a>
+        <a href="anfrage.html">Anfrage</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Kontakt</h1>
+      <p class="lead">Servicezentrale – verständliche Anfragen helfen uns schnell zu reagieren.</p>
+
+      <form id="kontaktForm" aria-label="Kontaktformular" novalidate>
+        <div class="form-row">
+          <label for="name">
+            Name <span class="required">*</span>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </label>
+          <label for="email">
+            E-Mail <span class="required">*</span>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="anliegen">
+            Anliegen <span class="required">*</span>
+            <select id="anliegen" name="anliegen" required>
+              <option value="">Bitte wählen…</option>
+              <option value="angebot">Angebot</option>
+              <option value="stoerung">Störung</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </label>
+          <label for="automatenkennung">
+            Automatenkennung (optional)
+            <input id="automatenkennung" name="automatenkennung" type="text" placeholder="Bei Störungen bitte angeben" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="nachricht">
+            Nachricht <span class="required">*</span>
+            <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Rückruf</legend>
+          <label>
+            <input id="rueckruf" name="rueckruf" type="checkbox" />
+            Rückruf gewünscht
+          </label>
+          <label id="telefonLabel" for="telefon">
+            Telefonnummer (nur wenn Rückruf gewünscht)
+            <input id="telefon" name="telefon" type="tel" placeholder="z. B. +49 123 456789" aria-describedby="telefon-hint" />
+            <small id="telefon-hint" class="hint">Geben Sie die Nummer nur an, wenn Rückruf gewünscht wird.</small>
+          </label>
+        </fieldset>
+
+        <div class="form-row">
+          <button type="submit">Absenden</button>
+          <button type="reset" class="secondary">Zurücksetzen</button>
+        </div>
+
+        <div class="notice">Hinweis: Kein Versand – lokale Datenausgabe zu Demonstrationszwecken.</div>
+        <output id="ausgabe" class="output" aria-live="polite" hidden></output>
+      </form>
+    </main>
+
+    <script src="demo.js" defer></script>
+  </body>
+</html>

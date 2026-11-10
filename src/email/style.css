@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+} /* Hier war vorher ein Minus statt eines Sternchens */
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	color: #292929;
+	background: #f3f5f6;
+	line-height: 1.5;
+}
+header,
+main,
+footer {
+	width: min(56rem, 100% - 2rem);
+	margin: 1.5rem auto;
+}
+
+/* ---- NEU: Navigation als Kästen ---- */
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+
+.brand {
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin: 0;
+}
+
+.main-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+header .main-nav a {
+	color: #831d17;
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid #831d17;
+	padding: 0.4rem 0.8rem;
+	border-radius: 0.3rem;
+	transition: all 0.2s;
+}
+
+header .main-nav a:hover,
+header .main-nav a:focus {
+	background: #831d17;
+	color: white;
+}
+
+h1 {
+	line-height: 1.2;
+	min-width: 0;
+}
+form {
+	background: white;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+.feldgruppe {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.feld {
+	flex: 1 1 16rem;
+	min-width: 0;
+	margin-bottom: 1rem;
+}
+.feld label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.3rem;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+	width: 100%;
+	padding: 0.7rem;
+	border: 1px solid #777;
+	border-radius: 0.25rem;
+	font: inherit;
+}
+input,
+select,
+textarea {
+	max-width: 100%;
+}
+textarea {
+	min-height: 8rem;
+	resize: vertical;
+}
+fieldset {
+	margin: 0 0 1rem;
+	border: 1px solid #777;
+	padding: 1rem;
+}
+legend {
+	font-weight: bold;
+}
+.wahl {
+	display: block;
+	padding: 0.4rem 0;
+}
+button {
+	background: #831d17;
+	color: white;
+	padding: 0.8rem 1.3rem;
+	font: inherit;
+	border: 0;
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+button:disabled {
+	background: #666;
+	cursor: not-allowed;
+}
+:focus-visible {
+	outline: 3px solid #831d17;
+	outline-offset: 3px;
+}
+pre {
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	font-size: 1rem;
+}
+small {
+	display: block;
+}
+price-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th,
+td {
+	border: 1px solid black; /* 1 Pixel dick, durchgezogen (solid), Farbe schwarz */
+	padding: 8px; /* Innerer Abstand zum Text */
+}
+input.invalid {
+	border: 2px solid #ff4d4d;
+	background-color: #ffe6e6;
+	outline: none;
+}
+.error-hidden {
+	display: none;
+}
+.error-visible {
+	display: block;
+	color: #ff4d4d;
+	font-size: 0.85rem;
+	margin-top: 5px;
+	font-weight: bold;
+}
